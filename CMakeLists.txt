@@ -15,6 +15,7 @@ include(cmake/variables.cmake)
 
 # ---- Declare library ----
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_library(
     cpp-template-metaprogram_lib OBJECT
     source/lib.cpp
@@ -38,7 +39,7 @@ add_executable(cpp-template-metaprogram::exe ALIAS cpp-template-metaprogram_exe)
 
 set_target_properties(
     cpp-template-metaprogram_exe PROPERTIES
-    OUTPUT_NAME cpp-template-metaprogram
+    OUTPUT_NAME elf
     EXPORT_NAME exe
 )
 
